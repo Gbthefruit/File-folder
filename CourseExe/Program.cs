@@ -1,5 +1,4 @@
 ﻿using System.Globalization;
-using System.Collections;
 namespace CourseExe
 {
     internal class Program
@@ -23,12 +22,9 @@ namespace CourseExe
 
                     double total = quant * price;
 
-                    
-                    string finnaly = $"{splits[0]}, R${total.ToString("F2").Replace(',','.')}";
-
                     using (StreamWriter sw = File.AppendText(target)) 
                     { 
-                        sw.WriteLine(finnaly);
+                        sw.WriteLine($"{splits[0]}, R${total.ToString("F2").Replace(',','.')}");
                     }
                 }                
 	    }
@@ -38,7 +34,7 @@ namespace CourseExe
             }
             finally 
             {
-				Console.WriteLine("Programa Finalizado.");
+		Console.WriteLine("Programa Finalizado.");
             }
         }
     }
