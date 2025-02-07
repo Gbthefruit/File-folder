@@ -30,9 +30,8 @@ namespace CourseExe
                     { 
                         sw.WriteLine(finnaly);
                     }
-                }
-                
-			}
+                }                
+	    }
             catch (IOException e)
             {
                 Console.WriteLine($"Error: {e.Message}");
